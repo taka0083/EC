@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  receiver: MyString
+  payment: 1
+  total_price: 1
+  postage: 1
+
+two:
+  receiver: MyString
+  payment: 1
+  total_price: 1
+  postage: 1
