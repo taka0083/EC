@@ -1,2 +1,15 @@
 <h1>Products#index</h1>
 <p>Find me in app/views/products/index.html.erb</p>
+<tr>
+  <th>商品名</th>
+  <th>値段</th>
+  <th><th>
+</tr>
+<tr>
+<% @products.each do |product| %>
+  <th><%=product.product_name %></th>
+  <th><%=product.product_price %></th>
+  <th><%= link_to "show",product_path(product) %></th>
+<% end %>
+</tr>
+</table>

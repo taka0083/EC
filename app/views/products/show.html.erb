@@ -1,2 +1,13 @@
-<h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
+
+<%= @product.product_name %>
+<%= @product.product_price %>
+<%= @product.product_comment %>
+
+<% if user_signed_in? %>
+<%= form_for @cart , url:carts_path( product_id: @product.id ) do |f| %>
+  <%= f.number_field :number, min: 1, max: 100, class: "cart_number"%>
+  <%= f.submit "注文" %>
+<% end %>
+<% else %>
+<p>ログインしてください</p>
+<% end %>
